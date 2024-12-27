@@ -40,7 +40,7 @@ jobs:
           mv $HOME/android-sdk/cmdline-tools/cmdline-tools $HOME/android-sdk/cmdline-tools/tools
           export ANDROID_SDK_ROOT=$HOME/android-sdk
           export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$ANDROID_SDK_ROOT/platform-tools
-          echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "build-tools;31.0.0"
+          echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "build-tools;31.0.0" "tools" "extras;android;m2repository" "extras;google;m2repository"
 
       - name: Build with Buildozer
         run: |
